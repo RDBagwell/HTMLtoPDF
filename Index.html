@@ -5,6 +5,7 @@
     <title>My Landing Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
 <body>
     <div id="pintPDF">
@@ -12,6 +13,7 @@
             <h1>My Landing Page</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, recusandae.</p>
             <button class="cta-btn" id="open">Sign Up</button>
+            <img src="./image/1_t_G1kZwKv0p2arQCgYG7IQ.gif" crossOrigin = "" />
         </header>
         <div class="container">
             <h2>What is this landing page about</h2>
@@ -62,6 +64,16 @@
     <button onClick="printToPDF();">Print to PDF</button> 
     <script>
         function printToPDF() {
+
+
+            // var source = document.getElementById('pintPDF');
+            // html2canvas(source).then((canvas)=>{
+            //     var imagedata = canvas.toDataURL('image/png');
+            //     document.body.appendChild(canvas)
+            //     var doc = new jsPDF('p', 'px', 'letter');
+            //     doc.addImage(imagedata, "PNG", 10, 10);
+            //     doc.save('test01.pdf');
+            // });
 
             var doc = new jsPDF('p', 'px', 'letter');
             var elementHandler = {
