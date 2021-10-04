@@ -66,15 +66,7 @@
         function printToPDF() {
 
 
-            // var source = document.getElementById('pintPDF');
-            // html2canvas(source).then((canvas)=>{
-            //     var imagedata = canvas.toDataURL('image/png');
-            //     document.body.appendChild(canvas)
-            //     var doc = new jsPDF('p', 'px', 'letter');
-            //     doc.addImage(imagedata, "PNG", 10, 10);
-            //     doc.save('test01.pdf');
-            // });
-
+            var source = document.getElementById('pintPDF');
             var doc = new jsPDF('p', 'px', 'letter');
             var elementHandler = {
                 '#test': function (element, renderer) {
@@ -82,9 +74,9 @@
                 },
 
             };
-            var source = document.getElementById('pintPDF');
+           
 
-            // HTML with CSS
+            /* HTML with CSS*/
             doc.addHTML(
                 source,
                     () => {
@@ -105,6 +97,16 @@
              
             /* Output PDf */
             // console.log(doc.output("dataurl"));
+
+            /* html2canvas version */
+            // var source = document.getElementById('pintPDF');
+            // html2canvas(source).then((canvas)=>{
+            //     var imagedata = canvas.toDataURL('image/png');
+            //     document.body.appendChild(canvas)
+            //     var doc = new jsPDF('p', 'px', 'letter');
+            //     doc.addImage(imagedata, "PNG", 10, 10);
+            //     doc.save('test01.pdf');
+            // });
             
 
         }
